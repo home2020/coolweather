@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.coolweather.android">
-
+    package="h.g.r.coolweather">
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/logo"
-        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:label="CoolRGH"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -18,12 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WeatherActivity" />
-
-        <service
-            android:name=".service.AutoUpdateService"
-            android:enabled="true"
-            android:exported="true" />
     </application>
 
 </manifest>
