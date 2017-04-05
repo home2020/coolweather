@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(253,151,32); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(234,136,47); }
+.s3 { color: rgb(253,151,32); }
+.s4 { color: rgb(246,246,239); }
+.s5 { color: rgb(239,239,232); }
+.s6 { color: rgb(224,208,103); }
+</style>
+</head>
+<BODY BGCOLOR="#1e1e1a">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+MainActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">coolweather</span><span class="s2">.</span><span class="s1">android</span><span class="s3">;</span><span class="s1"> 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">content</span><span class="s2">.</span><span class="s1">Intent</span><span class="s3">;</span><span class="s1"> 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">content</span><span class="s2">.</span><span class="s1">SharedPreferences</span><span class="s3">;</span><span class="s1"> 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">preference</span><span class="s2">.</span><span class="s1">PreferenceManager</span><span class="s3">;</span><span class="s1"> 
+<a name="l6"><span class="ln">6    </span></a></span><span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">support</span><span class="s2">.</span><span class="s1">v7</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">ActionBar</span><span class="s3">;</span><span class="s1"> 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">support</span><span class="s2">.</span><span class="s1">v7</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">AppCompatActivity</span><span class="s3">;</span><span class="s1"> 
+<a name="l8"><span class="ln">8    </span></a></span><span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span><span class="s3">;</span><span class="s1"> 
+<a name="l9"><span class="ln">9    </span></a> 
+<a name="l10"><span class="ln">10   </span></a></span><span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity </span><span class="s4">{</span><span class="s1"> 
+<a name="l11"><span class="ln">11   </span></a> 
+<a name="l12"><span class="ln">12   </span></a>    @Override 
+<a name="l13"><span class="ln">13   </span></a>    </span><span class="s0">protected void </span><span class="s1">onCreate</span><span class="s5">(</span><span class="s1">Bundle savedInstanceState</span><span class="s5">) </span><span class="s4">{</span><span class="s1"> 
+<a name="l14"><span class="ln">14   </span></a>        </span><span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s5">(</span><span class="s1">savedInstanceState</span><span class="s5">)</span><span class="s3">;</span><span class="s1"> 
+<a name="l15"><span class="ln">15   </span></a>        setContentView</span><span class="s5">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">activity_main</span><span class="s5">)</span><span class="s3">;</span><span class="s1"> 
+<a name="l16"><span class="ln">16   </span></a>        SharedPreferences prefs </span><span class="s3">= </span><span class="s1">PreferenceManager</span><span class="s2">.</span><span class="s1">getDefaultSharedPreferences</span><span class="s5">(</span><span class="s0">this</span><span class="s5">)</span><span class="s3">;</span><span class="s1"> 
+<a name="l17"><span class="ln">17   </span></a>        </span><span class="s0">if </span><span class="s5">(</span><span class="s1">prefs</span><span class="s2">.</span><span class="s1">getString</span><span class="s5">(</span><span class="s6">&quot;weather&quot;</span><span class="s2">, </span><span class="s0">null</span><span class="s5">) </span><span class="s3">!= </span><span class="s0">null</span><span class="s5">) </span><span class="s4">{</span><span class="s1"> 
+<a name="l18"><span class="ln">18   </span></a>            Intent intent </span><span class="s3">= </span><span class="s0">new </span><span class="s1">Intent</span><span class="s5">(</span><span class="s0">this</span><span class="s2">, </span><span class="s1">WeatherActivity</span><span class="s2">.</span><span class="s0">class</span><span class="s5">)</span><span class="s3">;</span><span class="s1"> 
+<a name="l19"><span class="ln">19   </span></a>            startActivity</span><span class="s5">(</span><span class="s1">intent</span><span class="s5">)</span><span class="s3">;</span><span class="s1"> 
+<a name="l20"><span class="ln">20   </span></a>            finish</span><span class="s5">()</span><span class="s3">;</span><span class="s1"> 
+<a name="l21"><span class="ln">21   </span></a>        </span><span class="s4">}</span><span class="s1"> 
+<a name="l22"><span class="ln">22   </span></a>    </span><span class="s4">}</span><span class="s1"> 
+<a name="l23"><span class="ln">23   </span></a> 
+<a name="l24"><span class="ln">24   </span></a></span><span class="s4">}</span></pre>
+</body>
+</html>
